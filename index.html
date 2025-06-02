@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDDHARTH'S DASHBOARD</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>SIDDHARTH'S DASHBOARD</title>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
     <header>
         <a href="index.html" class="logo">SID</a>
-
-        <nav>
-            <a href="index.html" class="active"> Home</a>
-            <a href="services.html" >Services</a>
-            <a href="skills.html" >Skills</a>
-            <a href="education.html" >Education</a>
-            <a href="contact.html" >Contact</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
+
     <section class="home">
         <div class="home-img">
-            <img src="main.jpg" alt="">
+            <img src="main.jpg" alt="Siddharth's profile image">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>SID</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-           <p class="highlight-intro">Crafting seamless web experiences & delivering reliable hardware solutions.</p>
+            <h3 class="typing-text">I'm a <span>Web Developer & Tech Enthusiast</span></h3>
+            <p class="highlight-intro">Crafting seamless web experiences & delivering reliable hardware solutions.</p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <a href="contact.html" class="btn">Hire me</a>
         </div>
     </section>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        toggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
