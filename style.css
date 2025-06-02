@@ -351,3 +351,39 @@ a {
         padding: 1.2rem 0.7rem;
     }
 }
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    nav a {
+        font-size: 1rem;
+        padding: 0.5rem 0.7rem;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .services-subheading {
+        font-size: 1.4rem;
+        margin: 2rem 0 1rem;
+    }
+    .highlight-intro {
+        font-size: 1rem;
+    }
+    .service-card,
+    .skill-card,
+    .education-card,
+    .contact-form,
+    .contact-info {
+        padding: 1rem 0.5rem;
+    }
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+    .contact-social a {
+        font-size: 1.5rem;
+    }
+}
