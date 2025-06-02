@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
 *{
     margin: 0;
@@ -583,6 +589,34 @@ span{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+@media (max-width: 700px) {
+    .services-container,
+    .skills-container,
+    .contact-container {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+    .service-card,
+    .skill-card,
+    .education-card,
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+    header {
+        padding: 1rem 2%;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .input-group label {
