@@ -231,18 +231,24 @@ span {
 @keyframes words {
     0%, 20% {
         content: "Web Developer";
+        text-decoration-color: #b74b4b;
     }
     21%, 40% {
         content: "Developer";
+        text-decoration-color: #b74b4b;
     }
     41%, 60% {
         content: "Web Designer";
+        text-decoration-color: #b74b4b;
     }
     61%, 80% {
         content: "Script Writer";
+        text-decoration-color: #b74b4b;
     }
     81%, 100% {
         content: "Software Developer";
+        text-decoration-color: #b74b4b;
+
     }
 }
 
