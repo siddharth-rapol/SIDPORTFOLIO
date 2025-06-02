@@ -227,3 +227,342 @@ span {
         margin-top: 4rem;
     }
 }
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header & Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: #181818;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #b74b4b;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 1.2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+    background: #b74b4b;
+    color: #fff;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 3rem;
+    color: #b74b4b;
+    cursor: pointer;
+    z-index: 110;
+}
+
+/* Section Headings */
+section {
+    padding: 7rem 9% 5rem;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 span,
+.services-subheading span {
+    color: #b74b4b;
+}
+
+.services-subheading {
+    color: #fff;
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Cards Container */
+.services-container,
+.skills-container,
+.education-timeline,
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Service, Skill, Education, Contact Cards */
+.service-card,
+.skill-card,
+.education-card,
+.contact-form,
+.contact-info {
+    background: #161616;
+    border-radius: 2rem;
+    padding: 2.5rem 2rem;
+    width: 380px;
+    box-shadow: 0 0 25px #b74b4b30;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    border: 1.5px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.service-card:hover,
+.skill-card:hover,
+.education-card:hover,
+.contact-form:hover,
+.contact-info:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 35px #b74b4b80;
+    border: 1.5px solid #b74b4b;
+}
+
+.service-card i,
+.skill-card i,
+.education-card i {
+    font-size: 3rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.service-card h2,
+.skill-card h2,
+.education-card h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p,
+.skill-card p,
+.education-card p {
+    font-size: 1.15rem;
+    color: #ccc;
+}
+
+.education-card h3 {
+    font-size: 1.2rem;
+    color: #b74b4b;
+    margin-bottom: 0.5rem;
+}
+
+.edu-year {
+    font-size: 1.1rem;
+    color: #fff;
+    background: #b74b4b;
+    padding: 0.2rem 1.2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-form {
+    width: 380px;
+    gap: 1.5rem;
+}
+
+.input-group label {
+    color: #b74b4b;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+    font-size: 1.1rem;
+}
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background: #222;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    outline: none;
+    transition: background 0.2s;
+}
+.input-group input:focus,
+.input-group textarea:focus {
+    background: #2a2a2a;
+}
+.btn {
+    background: #b74b4b;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn:hover {
+    background: #ff8c42;
+}
+
+.contact-info {
+    width: 320px;
+    color: #fff;
+}
+.contact-info h2 {
+    color: #b74b4b;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.contact-social {
+    margin-top: 1.5rem;
+}
+.contact-social a {
+    color: #b74b4b;
+    font-size: 2rem;
+    margin-right: 1.2rem;
+    transition: color 0.2s;
+}
+.contact-social a:hover {
+    color: #ff8c42;
+}
+
+/* Utility */
+a {
+    transition: color 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    section {
+        padding: 7rem 4% 5rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 2.2rem;
+        right: 3rem;
+    }
+    nav {
+        position: absolute;
+        top: 5.5rem;
+        right: 2rem;
+        width: 60vw;
+        min-width: 180px;
+        display: none;
+        flex-direction: column;
+        background: #161616;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 2rem 1.5rem;
+        z-index: 105;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav a {
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+        padding: 0.7rem 0.8rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .services-container,
+    .skills-container,
+    .education-timeline,
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .service-card,
+    .skill-card,
+    .education-card,
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        padding: 6rem 2% 3rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .services-subheading {
+        font-size: 1.7rem;
+    }
+    .service-card,
+    .skill-card,
+    .education-card,
+    .contact-form,
+    .contact-info {
+        padding: 1.2rem 0.7rem;
+    }
+}
