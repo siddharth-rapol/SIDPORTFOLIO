@@ -25,6 +25,22 @@ body{
     color: white;
 }
 
+/* Default state: hidden on large screens */
+.menu-toggle {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width:995px){
+    /* This rule makes it visible on screens 995px wide or smaller */
+    .menu-toggle {
+        display: block; /* Important: this overrides the 'display: none' above */
+    }
+    /* ... other mobile nav styles ... */
+}
+
 header {
     position: fixed;
     top: 0;
