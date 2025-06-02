@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* Added for Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Algeria:wght@400;700&display=swap'); /* Added for Algeria font */
+
 
 *{
     margin: 0;
@@ -13,8 +16,6 @@
 html{
     font-size: 62.5%;
 }
-
-
 
 body{
     width: 100%;
@@ -36,9 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    /* Remove filter: drop-shadow(10px); */
 }
-
 
 .logo{
     font-size: 3rem;
@@ -50,6 +49,14 @@ header {
 
 .logo:hover{
     transform: scale(1.1);
+}
+
+/* Mobile menu toggle icon */
+.menu-toggle {
+    display: none; /* Hidden by default, shown in media query */
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
 }
 
 nav a{
@@ -68,21 +75,26 @@ nav a.active{
 }
 
 @media(max-width:995px){
+    .menu-toggle {
+        display: block; /* Show hamburger icon on small screens */
+    }
     nav{
         position: absolute;
-        display: none;
-        top: 0;
+        display: none; /* Hidden by default */
+        top: 0; /* Align to top of header */
         right: 0;
         width: 40%;
         border-left: 3px solid #b74b4b;
         border-bottom: 3px solid #b74b4b;
         border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
+        padding: 1rem; /* Corrected syntax */
         background-color: #161616;
         border-top: 0.1rem solid rgba(0,0,0,0.1);
+        height: 100vh; /* Make nav fill entire viewport height */
+        padding-top: 7rem; /* Push content down below header */
     }
 
-    nav.active{
+    nav.show { /* Changed from nav.active to nav.show to match JS */
         display: block;
     }
 
@@ -103,14 +115,17 @@ nav a.active{
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
-}
-
-.home{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
     background-color: black;
+    flex-wrap: wrap; /* Added for responsiveness */
+    text-align: center; /* Added for responsiveness */
+}
+
+.home{
+    /* These styles are applied via the 'section' class above */
 }
 
 .home .home-content h1{
@@ -123,32 +138,37 @@ span{
     color: #b74b4b;
 }
 
-.home-content h3{
+.home-content h3{ /* This styles "I am a Web Developer" */
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    color: white; /* Ensure it's white if not part of span */
 }
 
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Using 1.6rem as per your latest input */
+    color: #ccc; /* Ensure clarity */
+    max-width: 600px; /* Improve readability on larger screens */
+    margin: auto; /* Center text */
 }
 
 .home-img{
     border-radius: 50%;
+    overflow: hidden; /* Ensures circular shape with image inside */
 }
 
 .home-img img{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 25px #b74b4b; /* Corrected box-shadow syntax (removed 'solid') */
     cursor: pointer;
     transition: 0.2s linear;
 }
 
 .home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
+    transform: scale(1.05); /* Corrected image hover effect */
+    /* Removed font-size and font-weight which don't apply to images */
 }
 
 .social-icons a{
@@ -170,7 +190,7 @@ span{
     color: black;
     transform: scale(1.3) translateY(-5px);
     background-color: #b74b4b;
-    box-shadow: 0  0 25px #b74b4b;
+    box-shadow: 0 0 25px #b74b4b; /* Corrected spacing in box-shadow */
 }
 
 .btn{
@@ -193,14 +213,8 @@ span{
     color: black;
     box-shadow: 0 0 25px #b74b4b;
 }
-.typing-text {
-    font-size: 2rem;
-    color: #b74b4b;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 1.5rem;
-}
+
+/* Removed .typing-text styles as per request for static text */
 
 @media (max-width: 1000px){
     .home{
@@ -311,6 +325,7 @@ span{
         min-width: 180px;
     }
 }
+
 /* SKILLS PAGE STYLES */
 .skills {
     min-height: 100vh;
@@ -410,6 +425,8 @@ span{
 .services-subheading span {
     color: #b74b4b;
 }
+
+/* EDUCATION PAGE STYLES */
 .education {
     min-height: 100vh;
     padding: 7rem 9% 5rem;
@@ -499,19 +516,17 @@ span{
     }
 }
 
-.home-content p {
-    font-size: 1.2rem; /* or use 12px, 80%, or smaller as needed */
-}
-
 .highlight-intro {
-    font-family: 'Algeria', serif, sans-serif;
-    font-size: 5px;
+    font-family: 'Algeria', serif, sans-serif; /* Uses Algeria font */
+    font-size: 5px; /* Very small font size */
     color: #ff8c42;
     font-weight: 700;
     letter-spacing: 1px;
     margin-top: 1.2rem;
     text-align: center;
 }
+
+/* CONTACT PAGE STYLES */
 .contact {
     min-height: 100vh;
     padding: 7rem 9% 5rem;
