@@ -8,16 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">SID</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html" class="active">Education</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <a href="index.html" class="logo">SID<span>.</span></a>
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+   
 <section class="education">
     <h1>My <span>Education</span></h1>
     <div class="education-timeline">
@@ -43,5 +48,33 @@
     </div>
 </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById("menu-toggle");
+            const nav = document.querySelector("nav");
+
+            // Toggle 'show' class on navigation when menu icon is clicked
+            toggle.addEventListener("click", () => {
+                nav.classList.toggle("show");
+            });
+
+            // Close the navigation menu when a link is clicked (useful for single-page apps)
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Only hide if the menu is currently shown (i.e., on mobile)
+                    if (nav.classList.contains('show')) {
+                        nav.classList.remove('show');
+                    }
+                });
+            });
+
+            // Handle window resize to hide menu-toggle and remove 'show' class if resized larger
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 995) { // If desktop size
+                    nav.classList.remove('show'); // Ensure menu is hidden
+                }
+            });
+        });
+    </script>
 </body>
 </html>
