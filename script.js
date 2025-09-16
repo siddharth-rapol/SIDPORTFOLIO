@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
      - Non-blocking, small tic rate for smoothness
   ------------------------- */
   const typingSpan = document.querySelector('.typing-text span');
-  const roles = ['Web Developer', 'Developer', 'Web Designer', 'CPU-HARDWARE EXPERT', 'STUDENT'];
+  const roles = ['Web Designer', 'CPU-HARDWARE EXPERT', 'STUDENT' , 'FRONT-END WEB DEV'];
 
   if (typingSpan) {
     let roleIndex = 0, charIndex = 0, isDeleting = false;
