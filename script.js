@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "Web Developer",
     "Developer",
     "Web Designer",
-    "Script Writer",
-    "Software Developer"
+    "CPU-HARDWARE EXPERT",
+    "STUDENT"
   ];
 
   const typingSpan = document.querySelector(".typing-text span");
