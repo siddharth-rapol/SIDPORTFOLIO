@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SIDDHARTH'S DASHBOARD</title>
 
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap">
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- header -->
   <header>
     <a href="index.html" class="logo">SID<span></span></a>
-    <div class="menu-toggle" id="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </div>
-    <nav>
+
+    <!-- Mobile menu toggle -->
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="skills.html">Skills</a>
@@ -27,28 +31,32 @@
     </nav>
   </header>
 
-  <section class="home">
-    <div class="home-img">
-      <img src="main.jpg" alt="Siddharth's Profile Picture"
-        onerror="this.onerror=null; this.src='https://placehold.co/320x320/6C63FF/ffffff?text=SID';">
-    </div>
-
-    <div class="home-content">
-      <h1>Hi, It's <span>SID</span></h1>
-      <h3 class="typing-text">I am a <span></span></h3>
-      <p class="highlight-intro">Crafting seamless web experiences & delivering reliable hardware solutions.</p>
-
-      <div class="social-icons">
-        <a href="https://wa.me/916303782715"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://github.com/siddharth-rapol/"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/siddharth.rapol/"><i class="fa-brands fa-instagram"></i></a>
+  <!-- home section -->
+  <main>
+    <section class="home" aria-label="Home section">
+      <!-- profile image -->
+      <div class="home-img" aria-hidden="false">
+        <img src="main.jpg" alt="Siddharth profile" onerror="this.onerror=null;this.src='https://placehold.co/320x320/6C63FF/ffffff?text=SID'">
       </div>
 
-      <a href="#" class="btn">Hire me</a>
-    </div>
-  </section>
+      <!-- content -->
+      <div class="home-content">
+        <h1>Hi, It's <span>SID</span></h1>
+        <h3 class="typing-text">I am a <span aria-live="polite"></span></h3>
+        <p class="highlight-intro">Crafting seamless web experiences & delivering reliable hardware solutions.</p>
 
-  <!-- JavaScript -->
+        <!-- social icons (no LinkedIn / Facebook) -->
+        <div class="social-icons" aria-hidden="false">
+          <a href="https://wa.me/916303782715" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://github.com/siddharth-rapol/" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/siddharth.rapol/" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <a href="contact.html" class="btn">Hire me</a>
+      </div>
+    </section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>

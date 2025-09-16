@@ -1,110 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SID's Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SID's Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header>
+  <!-- header -->
+  <header>
     <a href="index.html" class="logo">SID<span></span></a>
-    <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
-        <a href="skills.html">Skills</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact</a>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
     </nav>
-</header>
+  </header>
 
-   
+  <main>
+    <section class="services" aria-label="Services">
+      <h1>My <span>Services</span></h1>
 
- <section class="services">
-    <h1>My <span>Services</span></h1>
+      <h2 class="services-subheading">Web <span>Development</span></h2>
+      <div class="services-container">
+        <article class="service-card">
+          <i class="fas fa-code" aria-hidden="true"></i>
+          <h2>Web Development</h2>
+          <p>Modern, responsive websites built with the latest technologies to bring your ideas to life.</p>
+        </article>
 
-    <!-- Web Development Services Heading -->
-    <h2 class="services-subheading">Web <span>Development</span></h2>
-    <div class="services-container">
-        <div class="service-card">
-            <i class="fas fa-code"></i>
-            <h2>Web Development</h2>
-            <p>Modern, responsive websites built with the latest technologies to bring your ideas to life.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-paint-brush"></i>
-            <h2>UI/UX Design</h2>
-            <p>Intuitive and beautiful interfaces that offer seamless user experiences across all devices.</p>
-        </div>
-        <div class="service-card">
-            <i class="fab fa-node-js"></i>
-            <h2>App Development</h2>
-            <p>Cross-platform mobile apps that are fast, reliable, and tailored to your business needs.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-pen-nib"></i>
-            <h2>Script Writing</h2>
-            <p>Creative scripts for videos, ads, and presentations that engage and inspire your audience.</p>
-        </div>
-    </div>
+        <article class="service-card">
+          <i class="fas fa-paint-brush" aria-hidden="true"></i>
+          <h2>UI/UX Design</h2>
+          <p>Intuitive and beautiful interfaces that offer seamless user experiences across devices.</p>
+        </article>
 
-    <!-- Hardware and IT Services Heading -->
-    <h2 class="services-subheading">Hardware and <span>IT Services</span></h2>
-    <div class="services-container">
-        <div class="service-card">
-            <i class="fas fa-tools"></i>
-            <h2>PC Assembly & Troubleshooting</h2>
-            <p>Expert assembly, upgrades, and repair for desktops and laptops. Fast diagnostics and component replacement.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-network-wired"></i>
-            <h2>Networking Solutions</h2>
-            <p>Home and office network setup, router/switch installation, Wi-Fi deployment, and network troubleshooting.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-server"></i>
-            <h2>System Administration</h2>
-            <p>Windows & Linux server setup, backup solutions, system monitoring, and performance optimization.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-shield-alt"></i>
-            <h2>IT Security</h2>
-            <p>Firewall configuration, antivirus deployment, and best practices for data protection and network security.</p>
-        </div>
-    </div>
-</section>
+        <article class="service-card">
+          <i class="fab fa-node-js" aria-hidden="true"></i>
+          <h2>App Development</h2>
+          <p>Cross-platform apps that are fast, reliable and tailored to your needs.</p>
+        </article>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggle = document.getElementById("menu-toggle");
-            const nav = document.querySelector("nav");
+        <article class="service-card">
+          <i class="fas fa-pen-nib" aria-hidden="true"></i>
+          <h2>Script Writing</h2>
+          <p>Creative scripts for videos, ads and presentations that engage your audience.</p>
+        </article>
+      </div>
 
-            // Toggle 'show' class on navigation when menu icon is clicked
-            toggle.addEventListener("click", () => {
-                nav.classList.toggle("show");
-            });
+      <h2 class="services-subheading">Hardware & <span>IT Services</span></h2>
+      <div class="services-container">
+        <article class="service-card">
+          <i class="fas fa-tools" aria-hidden="true"></i>
+          <h2>PC Assembly</h2>
+          <p>Assembly, upgrades and fast diagnostics for desktops and laptops.</p>
+        </article>
 
-            // Close the navigation menu when a link is clicked (useful for single-page apps)
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    // Only hide if the menu is currently shown (i.e., on mobile)
-                    if (nav.classList.contains('show')) {
-                        nav.classList.remove('show');
-                    }
-                });
-            });
+        <article class="service-card">
+          <i class="fas fa-network-wired" aria-hidden="true"></i>
+          <h2>Networking</h2>
+          <p>Home & office network setup and troubleshooting.</p>
+        </article>
 
-            // Handle window resize to hide menu-toggle and remove 'show' class if resized larger
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 995) { // If desktop size
-                    nav.classList.remove('show'); // Ensure menu is hidden
-                }
-            });
-        });
-    </script>
+        <article class="service-card">
+          <i class="fas fa-server" aria-hidden="true"></i>
+          <h2>System Administration</h2>
+          <p>Windows & Linux server setup, backups and performance tuning.</p>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          <h2>IT Security</h2>
+          <p>Firewall, antivirus and best practices for data protection.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
